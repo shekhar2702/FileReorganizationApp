@@ -9,7 +9,7 @@ let tree = function (pathFile, level) {
   for (let i = 0; i < folderContents.length; i++) {
     let statOfFiles = fs.lstatSync(path.join(pathFile, folderContents[i]));
     if (statOfFiles.isFile()) {
-      console.log();
+      // console.log();
       for (let j = 1; j <= level; j++) {
         process.stdout.write("\t");
       }
