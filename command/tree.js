@@ -13,10 +13,11 @@ let tree = function (pathFile, level) {
       for (let j = 1; j <= level; j++) {
         process.stdout.write("\t");
       }
-      process.stdout.write(`|-------${folderContents[i]}`);
+      process.stdout.write(`|-------${folderContents[i]}
+      `);
     } else {
       let currentDirPath = path.join(pathFile, folderContents[i]);
-      tree(currentDirPath);
+      tree(currentDirPath, level + 1);
     }
   }
 };
